@@ -52,7 +52,7 @@ for ARCH in $win_downloads; do
     echo "win-$ARCH ..."
     wd="/tmp/7z-bin/win/${ARCH}"
     7z_download_extract "$wd" "${DOWNLOAD_PATH}/7z${VERSION}-${ARCH}.exe"
-    mkdir -p ./win/${$ARCH}/
+    mkdir -p ./win/${ARCH}/
     cp "${wd}/7z.exe" ./win/${ARCH}/7z.exe
     cp "${wd}/7z.dll" ./win/${ARCH}/7z.dll
 done
@@ -60,6 +60,6 @@ done
 wd="/tmp/7z-bin/win/ia32"
 ARCH="ia32"
 7z_download_extract "$wd" "${DOWNLOAD_PATH}/7z${VERSION}.exe"
-mkdir -p ./win/${$ARCH}/
+mkdir -p ./win/${ARCH}/
 cp "${wd}/7z.exe" ./win/${ARCH}/7z.exe
 cp "${wd}/7z.dll" ./win/${ARCH}/7z.dll
