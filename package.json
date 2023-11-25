@@ -1,6 +1,6 @@
 {
     "name": "@playableprints/7z-bin",
-    "version": "23.01",
+    "version": "23.1.0",
     "description": "",
     "main": "index.js",
     "files": [
