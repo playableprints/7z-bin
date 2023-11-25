@@ -2,6 +2,7 @@
     "name": "@playableprints/7z-bin",
     "version": "23.1.0",
     "description": "",
+    "private": false,
     "main": "index.js",
     "files": [
         "index.js",
