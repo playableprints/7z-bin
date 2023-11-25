@@ -1,6 +1,6 @@
 {
     "name": "7z-bin",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "",
     "main": "index.js",
     "files": [
@@ -11,6 +11,7 @@
         "win"
     ],
     "scripts": {
+        "prepublish": "./scripts/fetchBins.sh",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
