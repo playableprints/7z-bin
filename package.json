@@ -11,7 +11,7 @@
         "win"
     ],
     "scripts": {
-        "prepublish": "./scripts/fetchBins.sh",
+        "prepublish": "./scripts/fetchBins.sh 2301",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
