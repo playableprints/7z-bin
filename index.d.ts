@@ -1,1 +1,1 @@
-export const path7za: string;
+export const path7z: string;

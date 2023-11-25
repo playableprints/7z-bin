@@ -21,8 +21,8 @@ function 7z_download_extract {
     wd="$1"
     url="$2"
     mkdir -p "${wd}"
-    wget -O "${wd}/7za.7z" "${url}"
-    /tmp/7z-bin/linux/x64/7zzs x -y -o"${wd}" "${wd}/7za.7z"
+    wget -O "${wd}/7z.7z" "${url}"
+    /tmp/7z-bin/linux/x64/7zzs x -y -o"${wd}" "${wd}/7z.7z"
 }
 
 # Linux:
@@ -33,7 +33,7 @@ for ARCH in $linux_downloads; do
     wd=/tmp/7z-bin/linux/${ARCH}
     tar_download_extract "$wd" "${DOWNLOAD_PATH}/7z${VERSION}-linux-${ARCH}.tar.xz"
     mkdir -p ./linux/${ARCH}/
-    cp "${wd}/7zzs" ./linux/${ARCH}/7za
+    cp "${wd}/7zzs" ./linux/${ARCH}/7zzs
 done
 
 # Mac:
@@ -42,7 +42,7 @@ echo "MacOS ..."
 wd="/tmp/7z-bin/mac"
 tar_download_extract "${wd}" "${DOWNLOAD_PATH}/7z${VERSION}-mac.tar.xz"
 mkdir -p ./mac/
-cp "${wd}/7zz" ./mac/7za
+cp "${wd}/7zz" ./mac/7zz
 
 # Windows:
 # (on Linux)
@@ -53,7 +53,7 @@ for ARCH in $win_downloads; do
     wd="/tmp/7z-bin/win/${ARCH}"
     7z_download_extract "$wd" "${DOWNLOAD_PATH}/7z${VERSION}-${ARCH}.exe"
     mkdir -p ./win/${$ARCH}/
-    cp "${wd}/7z.exe" ./win/${ARCH}/7za.exe
+    cp "${wd}/7z.exe" ./win/${ARCH}/7z.exe
     cp "${wd}/7z.dll" ./win/${ARCH}/7z.dll
 done
 
@@ -61,5 +61,5 @@ wd="/tmp/7z-bin/win/ia32"
 ARCH="ia32"
 7z_download_extract "$wd" "${DOWNLOAD_PATH}/7z${VERSION}.exe"
 mkdir -p ./win/${$ARCH}/
-cp "${wd}/7z.exe" ./win/${ARCH}/7za.exe
+cp "${wd}/7z.exe" ./win/${ARCH}/7z.exe
 cp "${wd}/7z.dll" ./win/${ARCH}/7z.dll
